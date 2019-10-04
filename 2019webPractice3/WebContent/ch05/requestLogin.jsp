@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+	response.sendRedirect("responseExample.jsp");
+%>
 
 	<h1>로그인</h1>
 		<form method='post' action='requestLoginProc.jsp'>
