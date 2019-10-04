@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +8,11 @@
 </head>
 <body>
 
-	<h1>�α���</h1>
+	<h1>로그인</h1>
 		<form method='post' action='requestLoginProc.jsp'>
-			���̵� : <input type="text" name='id'><p>
-			��й�ȣ : <input type="password" name='pw'><p>
-			<input type="submit" value="Ȯ��">
+			아이디 : <input type="text" name='id'><p>
+			비밀번호 : <input type="password" name='pw'><p>
+			<input type="submit" value="확인">
 		</form>
 </body>
 </html>
