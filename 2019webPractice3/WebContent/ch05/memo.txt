@@ -1,0 +1,32 @@
+4개의 scope(영역) 페이지 영역, Page,PAGE 영역은 대소문자구분을안한다
+-page 영역	; 1개의 jsp 파일 에 하나페이지
+-request 영역; 1개의 요청과 관련된 영역 //클라이언트 요청 1개에 대응하는 영역//4(여러)개의 페이지영역이 1개 리퀘스트영역구성하기도한다 //request 객체
+-session 영역;	1개의 브라우저 영역 //브라우저별로 따로 관리된다 //새로운 브라우저로 들어왔더니 로그아웃되있으면 세션영역 //session 객체
+application 영역; 	로그아웃을 안하고 브라우저를 종료하고 다시 들어왔을때 로그인이 되어이쓰면 로그인정볼르 저장하는 변수가 이 영역에 있다// 클라이언트별로 한개 // application 객체
+
+
+pageContext객체가 page영역을 담당
+
+땅덩어리개념 
+
+
+모듈화해서 웹사이트를만들어야된다
+
+String s = "asdf";
+.setAtrtribut("s","asdf"); 둘이 동일
+.setAtrtribut("s","asdf"); 둘이 동일
+
+
+
+request.setAtrtribut("s","asdf"); 
+session.setAtrtribut("s","asdf");
+같은 s지만둘이다름 
+.getAttribute("s");
+
+session.setAttribute("s","asdf");
+session.getAttribute("s");
+-------
+객체명이같아야돔
+
+session.setAttribute("s","asdf");
+String t = (String) session.getAttribute("s");
