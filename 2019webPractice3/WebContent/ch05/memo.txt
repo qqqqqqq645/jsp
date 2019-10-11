@@ -18,8 +18,8 @@ String s = "asdf";
 
 
 
-request.setAtrtribut("s","asdf"); 
-session.setAtrtribut("s","asdf");
+request.setAttribute("s","asdf"); 
+session.setAttribue("s","asdf");
 같은 s지만둘이다름 
 .getAttribute("s");
 
@@ -36,4 +36,7 @@ String t = (String) session.getAttribute("s");
 
 String s="웹";
 System.out.print(s)
-<%=session.getAttribute(s); %>
+<%=session.getAttribute(s); %> 
+String t = (String) session.getAttribute(s);
+
+어트리뷰트가 set이안되있어도 get간응 -- null값반환

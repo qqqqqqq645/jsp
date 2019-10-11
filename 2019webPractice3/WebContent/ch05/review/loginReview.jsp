@@ -9,7 +9,7 @@
 <body>
 <%
 	  String memLogin = (String)session.getAttribute("memLogin");
-	String chked = "checked"
+	String chked = "checked";
 %>
 	<h1>로그인</h1>
 	<%
@@ -21,7 +21,7 @@
 			<form method='post' action='loginReviewProc.jsp'>
 			아이디 : <input type="text" name='id'><p>
 			비밀번호 : <input type="password" name='pw'><p>
-			<input type="checkbox" name='savechk' <%=chked %>> 아이디/비밀번호 저장 <br> <!-- checked 씀면 체크되어있는상태 -->
+			<input type="checkbox" name='savechk' <%=chked %> > 아이디/비밀번호 저장 <br> <!-- checked 씀면 체크되어있는상태 -->
 			<input type="submit" value="확인"><br>
 
 			</form>
@@ -30,7 +30,7 @@
 		 } else{
 			 			 
 	%>
-	<%=id %> 님, 환영합니다.
+	<%=memLogin %> 님, 환영합니다.
 			<form method='post' action='loginReviewProc.jsp'>
 				<input type="submit" value="로그아웃">
 			</form>
