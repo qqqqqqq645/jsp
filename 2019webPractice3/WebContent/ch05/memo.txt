@@ -73,3 +73,5 @@ c<<<<<<<<<<<<<<<b.jsp
 <jsp:forward page="LoginReview.jsp" />
 <p>		</p> == <p/>
 시작태그	종료태그      시작및종료
+
+페이ㅣ지 모듈화
