@@ -10,8 +10,17 @@
 	String p = request.getParameter("pw");
 	if(i.equals("dong") && p.equals("1234")){
 		session.setAttribute("memLogin","ok");
-		session.setAttribute("chked","checked");
-
+		
+		if(request.getParameter("savechk")!=null){
+			session.setAttribute("chked","checked");
+			session.setAttribute("memName",i);
+			session.setAttribute("memPw",p);
+		}
+		else{
+			
+			session.removeAttribute(memName,memPw);
+		}
+		response.sendRedirect("loginReview.jsp");
 	}
 	else {
 		session.setAttribute("chked","");

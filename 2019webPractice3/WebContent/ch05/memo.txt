@@ -49,3 +49,27 @@ session은 서버단에 저장
 response.addcookie
 클라이언트에 쿠키를 심어놓으면 나중에 다시 쿠키를 가져와야된다
 db와 attribute는 다름ㄴㄷ
+
+
+
+response.sendRedirect 를 액션태그로 대체 가능
+<jsp:forward page="LoginReview.jsp" />
+액션태그는 html태그와 같은거라서 쓰려면 스크립트릿밖에다써야돈다
+
+	request과정
+c                      s a.jsp,b.jsp
+a요청 >>>>>>>>>>>>>>>>> s
+c<<<<<<<<<<<<<<<<<<<<<a에서 b문서를 요청하라고 응답
+c.b요청>>>>>>>>>>>>>>>>>>>>>s
+c<<<<<<<<<<<<<<<<<<<<<<<<b 문서 응답
+
+foward 프로세스
+a요청 >>>>>>>>>>> a에서 b문서를 전달
+c<<<<<<<<<<<<<<<b.jsp
+
+<jsp:forward>
+</jsp:forward>
+
+<jsp:forward page="LoginReview.jsp" />
+<p>		</p> == <p/>
+시작태그	종료태그      시작및종료
