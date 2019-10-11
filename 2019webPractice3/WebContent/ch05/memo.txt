@@ -30,3 +30,10 @@ session.getAttribute("s");
 
 session.setAttribute("s","asdf");
 String t = (String) session.getAttribute("s");
+
+
+
+
+String s="웹";
+System.out.print(s)
+<%=session.getAttribute(s); %>
