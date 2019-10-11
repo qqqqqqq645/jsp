@@ -40,3 +40,12 @@ System.out.print(s)
 String t = (String) session.getAttribute(s);
 
 어트리뷰트가 set이안되있어도 get간응 -- null값반환
+
+
+쿠키와 세션
+attribute 어떤 값을 저장하기 위한 변수//정보저장
+session은 서버단에 저장
+쿠키는 client단에 저장 //보안때ㅜㅁㄴ에 거의 사용하지않음
+response.addcookie
+클라이언트에 쿠키를 심어놓으면 나중에 다시 쿠키를 가져와야된다
+db와 attribute는 다름ㄴㄷ
