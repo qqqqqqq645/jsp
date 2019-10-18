@@ -82,7 +82,13 @@ c<<<<<<<<<<<<<<<b.jsp
 
 
 
+파라미터는 a->b
+어트리뷰트는 4개의 영역에서설정하면 넘길필요x
 
+<jsp:include page="test.jsp/>
+<jsp:param name = "id" value="hong" />
+<jsp:param name = "a" value="10" />
+</jsp:include>
 
 
 

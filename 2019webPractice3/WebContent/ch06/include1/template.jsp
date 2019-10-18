@@ -18,8 +18,16 @@
 		어트리뷰트는 여러 파일간에 값을 공유 */
 %>
 <body><!-- html 시맨틱 태그를 이용하여 구조 만듦 -->
+
+
 	<header>
-		<jsp:include page="top.jsp" flush="false"/>
+		<jsp:include page="top.jsp" flush="false"/> <!-- 이 액션은 해당파일로 가서 실행하고 온다 -->
+		<%-- <%@ include file = "top.jsp%> 디렉티브를 만나면ㅁ 해당파일로가서 코드를 실행하지않고 코드를 가져옴 --%>
+		<!--
+			int a = 10		top				int a=10		top a=20
+			<jsp:top		a=20			@include top
+			print a ->a=10					print a->a=20
+		 -->
 	</header>
 	<div id="content">
 		<section id="areaSub">
