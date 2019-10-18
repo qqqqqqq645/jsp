@@ -1,8 +1,9 @@
 <%@ page contentType = "text/html; charset=utf-8" %>
 <%
 	request.setCharacterEncoding("utf-8");
+	//액션페이지
 %>
-
+<<jsp:useBean id="memberInfo" class="member.MemberInfo" />
 <html>
 <head><title>가입</title></head>
 <body>
