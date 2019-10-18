@@ -3,7 +3,17 @@
 	request.setCharacterEncoding("utf-8");
 	//액션페이지
 %>
-<<jsp:useBean id="memberInfo" class="member.MemberInfo" />
+<jsp:useBean id="mem" class="member.MemberInfo" />
+<!-- member.MemberInfo mem = new member.MemberInfo -->
+
+<!--jsp:setProperty property="id" name="mem" 
+	<%-- value="<%=request.getParameter("id") %>" --%>
+/-->
+
+<jsp:setProperty property="*" name="mem"/>
+<!-- 폼의 name이 클래스이름이같아야됨 -->
+<jsp:setProperty name="mem" property="password"
+	value=""/>
 <html>
 <head><title>가입</title></head>
 <body>
