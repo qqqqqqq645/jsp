@@ -11,10 +11,10 @@
 <form method="post" action="request2Proc.jsp">
 			학번 : <input type="text" name="studentNum"><p>
 			전공 : <select multiple name="major">
-							<option selected value="전산과">전산과
-							<option value="국문과">국문과
-							<option value="자유전공과">자유전공과
-							<option value="경영학과">경영학과
+							<option selected value="전산과">전산과</option>
+							<option value="국문과">국문과</option>
+							<option value="자유전공과">자유전공과</option>
+							<option value="경영학과">경영학과</option>
 			
 						</select><p>
 				<input type="submit" value="보내기">
