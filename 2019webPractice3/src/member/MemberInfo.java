@@ -3,6 +3,7 @@ import java.util.Date;
 public class MemberInfo {
 	/*자바빈 데이터묶음 규칙 
 	 * 필드의 접근제한자는 무적권 private
+	 * 이필드에 접근하려면 getter setter 추가해ㅑㅇ딤
 	 * 자바빈의
 	 */
 		private String id;
