@@ -26,7 +26,7 @@
 		<%-- <%@ include file = "top.jsp%> 디렉티브를 만나면ㅁ 해당파일로가서 코드를 실행하지않고 코드를 가져옴 --%>
 		<!--
 			int a = 10		top				int a=10		top a=20
-			<jsp:top		a=20			@include top
+			jsp:top		a=20			@include top
 			print a ->a=10					print a->a=20
 		 -->
 	</header>
