@@ -86,13 +86,24 @@ c<<<<<<<<<<<<<<<b.jsp
 어트리뷰트는 4개의 영역에서설정하면 넘길필요x
 
 <jsp:include page="test.jsp/>
-<jsp:param name = "id" value="hong" />
+<jsp:param name = "id" value="hong" /> //이 파라미터를 include 사이에쓰려고 include 하는데 넘겨주는 값이 있으면여기다써
 <jsp:param name = "a" value="10" />
 </jsp:include>
 
+<%@ include file %>
+
+45678
+
+4장에 디렉티브  책에는 3개 taglib x
+쿠기와 세션으 차이
 
 
+mvc모델 4차산업의 키워드
+model view controller
 
+model	javabin		유닛 모듈 모델 객체 오브젝트-> 관련성이 있는 데이터의 묶음이나 반복해야하는 명령어의 모음
+view	jsp
+controller	servlet
 
 
 

@@ -3,7 +3,7 @@
 <%
 	String idVar = request.getParameter("id");
 	String pwVar = request.getParameter("pw");
-	
+	request.setAttribute("sa", idVar);
 %>
 <!DOCTYPE html>
 <html>
