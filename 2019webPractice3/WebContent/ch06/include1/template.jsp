@@ -22,6 +22,7 @@
 
 	<header>
 		<jsp:include page="top.jsp" flush="false"/> <!-- 이 액션은 해당파일로 가서 실행하고 온다 -->
+		<!-- top.jsp 가 버퍼에 남아있지 않고 출발하면안되니까 모듈화되있는 온전한 페이지가 다 모이면 출발하려고 flush=false -->
 		<%-- <%@ include file = "top.jsp%> 디렉티브를 만나면ㅁ 해당파일로가서 코드를 실행하지않고 코드를 가져옴 --%>
 		<!--
 			int a = 10		top				int a=10		top a=20

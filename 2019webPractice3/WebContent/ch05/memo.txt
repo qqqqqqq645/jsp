@@ -105,7 +105,15 @@ model	javabin		유닛 모듈 모델 객체 오브젝트-> 관련성이 있는 �
 view	jsp
 controller	servlet
 
+\
+적정한버퍼사이즈로구현하는것이중요
+버퍼 -페이지디렉티브에서 사이즈설정가능
+autoflush 기본은 true
 
+out.getBuffersize()
+
+버퍼는  설정은 page 디렉티브, 상황은ㅇ out객체 
+a와 b 사이의 중간공간?
 
 
 
