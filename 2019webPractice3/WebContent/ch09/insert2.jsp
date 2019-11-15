@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
-<%@page import ="java.sql.*" %>
+<%@page import ="java.sql.* "%>
     <%
     	request.setCharacterEncoding("utf-8");
     	String memberID = request.getParameter("memberID");
@@ -8,8 +8,9 @@
     	String name = request.getParameter("name");
     	String address = request.getParameter("address");
     	String tel = request.getParameter("tel");
+    	Class.forName("com.mysql.jdbc.Driver");//해당메모리에 문자열을로딩 8은 com.mysql.cj.jdbc.Driver
     	Connection conn = null;
-    	Statement smt = null;
+    	PreparedStatement pstmt = null;
     	try {
     		String jdbcDriver = "jdbc:mysql://localhost:3306/studyjspc";
     		//db서버,db이름까지지정
@@ -18,7 +19,7 @@
     		String dbUser = "root";
     		String dbPass = "dongyang";
     		
-    		Class.forName("com.mysql.jdbc.Driver");//해당메모리에 문자열을로딩 8은 com.mysql.cj.jdbc.Driver
+    	
     		//위문장은 트라이에안너허도됨
     		/*
     		1.커넥터(드라이버) 로딩 mysql 드라이버로딩은 별도의작업
@@ -29,8 +30,15 @@
     		*/
     		conn = DriverManager.getConnection(jdbcDriver,dbUser,dbPass);
     		//연결하려는 db서버,유저,비번
-    		smt = conn.createStatement();
-    		smt.executeUpdate("insert into members values('"+memberID+"', '"+password+"', '"+name+"', now() , '"+address+"', '"+tel+"');");// 나머지쿼리들
+    		pstmt = conn.prepareStatement("insert into members values(?,?,?,?,?,?);");
+    		pstmt.setString(1,memberID);
+    		pstmt.setString(2,password);
+    		pstmt.setString(3,name);
+    		pstmt.setTimestamp(4,new Timestamp(System.currentTimeMillis()));
+    		pstmt.setString(5,address);
+    		pstmt.setString(6,tel);
+    		pstmt.executeUpdate();
+    		//pstmt.executeUpdate("insert into MEMBERs values('"+memberID+"', '"+password+"', '"+name+"', now() , '"+address+"', '"+tel+"');");// 나머지쿼리들
     		/*
     		*"insert into members values('chang','1','a',now(),'seoul','123-1');"
     		* String id = "chang";
@@ -39,8 +47,9 @@
     		*/
     		//smt.executeQuery(" "); //select 쿼리문  사용할때
     		} finally {
-    		smt.close();
-    		conn.close();
+    			pstmt.close();
+    			conn.close();
+    			//response.sendRedirect("insertForm.jsp");
     	}
     %>
 <!DOCTYPE html>

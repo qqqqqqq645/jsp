@@ -3,7 +3,7 @@
 <head><title>MEMBER 테이블 레코드 삽입</title></head>
 <body>
 
-<form action="insert1.jsp" method="post">
+<form action="insert2.jsp" method="post">
 <table border="1">
 <tr>
 	<td>아이디</td>

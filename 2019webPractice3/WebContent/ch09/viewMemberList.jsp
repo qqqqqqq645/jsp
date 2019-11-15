@@ -10,6 +10,8 @@
     	String tel = request.getParameter("tel");
     	Connection conn = null;
     	Statement smt = null;
+    	ResultSet rs = null;
+    	//resultset 안에는 커서가있다.
     	try {
     		String jdbcDriver = "jdbc:mysql://localhost:3306/studyjspc";
     		//db서버,db이름까지지정
@@ -30,14 +32,16 @@
     		conn = DriverManager.getConnection(jdbcDriver,dbUser,dbPass);
     		//연결하려는 db서버,유저,비번
     		smt = conn.createStatement();
-    		smt.executeUpdate("insert into members values('"+memberID+"', '"+password+"', '"+name+"', now() , '"+address+"', '"+tel+"');");// 나머지쿼리들
-    		/*
-    		*"insert into members values('chang','1','a',now(),'seoul','123-1');"
-    		* String id = "chang";
-    		* String pw = "1";
-    		*"insert into members values('"+id+"','"+pw+"1','a',now(),'seoul','123-1');"
-    		*/
-    		//smt.executeQuery(" "); //select 쿼리문  사용할때
+    		rs = smt.executeQuery("select * from members order by id;");
+    		while(rs.next()){
+    			out.print(rs.getString("id"));
+    			out.print(rs.getString("passwd"));
+    			out.print(rs.getString("name"));
+    			out.print("<br>");
+    		}
+    		
+    		
+    		//id기준으로 정렬해서 모든필드가져옴
     		} finally {
     		smt.close();
     		conn.close();
