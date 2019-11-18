@@ -8,24 +8,25 @@
 </head>
 <% String i = request.getParameter("id");
 	String p = request.getParameter("pw");
+	String chkbox = request.getParameter("savechk");
 	if(i.equals("dong") && p.equals("1234")){
 		session.setAttribute("memLogin","ok");
+		session.setAttribute("userId",i);
 		
-		if(request.getParameter("savechk")!=null){
-			session.setAttribute("chked","checked");
-			session.setAttribute("memName",i);
-			session.setAttribute("memPw",p);
-		}
-		else{
-			
-			session.removeAttribute(memName,memPw);
-		}
-		response.sendRedirect("loginReview.jsp");
+	
+	}
+	if(chkbox!=null){
+		session.setAttribute("chked", "checked");
+		session.setAttribute("memName", i);
+		session.setAttribute("memPw",p);
 	}
 	else {
 		session.setAttribute("chked","");
-		response.sendRedirect("loginReview.jsp");
+		session.removeAttribute("memName");
+		session.removeAttribute("memPw");
+	
 	}
+	response.sendRedirect("loginReview.jsp");
 	
 	%>
 <body>

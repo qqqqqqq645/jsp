@@ -12,12 +12,13 @@
     	Connection conn = null;
     	PreparedStatement pstmt = null;
     	try {
-    		String jdbcDriver = "jdbc:mysql://localhost:3306/studyjspc";
+    		//String jdbcDriver = "jdbc:mysql://localhost:3306/studyjspc";
+    		String jdbcDriver = "jdbc:mysql://192.168.55.144:3306/studyjspc";
     		//db서버,db이름까지지정
     		//mysql8부터는 serverTimezone=UTC파라미터를줘야함
     		//?serverTimezone=UTC
-    		String dbUser = "root";
-    		String dbPass = "dongyang";
+    		String dbUser = "exme";
+    		String dbPass = "1q2w3e";
     		
     	
     		//위문장은 트라이에안너허도됨
@@ -49,7 +50,7 @@
     		} finally {
     			pstmt.close();
     			conn.close();
-    			//response.sendRedirect("insertForm.jsp");
+    			response.sendRedirect("viewMemberList.jsp");
     	}
     %>
 <!DOCTYPE html>

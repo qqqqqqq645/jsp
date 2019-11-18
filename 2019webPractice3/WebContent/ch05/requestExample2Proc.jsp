@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%><!-- %@는 페이지 디렉티브 -->
+    pageEncoding="UTF-8" import="java.util.*"%><!-- %@는 페이지 디렉티브 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +22,7 @@
 	out.print("성별 : "+ gendvar + "<br>");
 	for(int i=0;i<hobbyVar.length;i++){
 		out.print(hobbyVar[i]+", ");
+		Iterator aa =  request.getParameterValues("hobby").
 	}
 	/*
 	for(int i:hobbyVar){

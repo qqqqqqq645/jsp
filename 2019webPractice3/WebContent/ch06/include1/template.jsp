@@ -29,6 +29,7 @@
 			jsp:top		a=20			@include top
 			print a ->a=10					print a->a=20
 		 -->
+		 
 	</header>
 	<div id="content">
 		<section id="areaSub">
